@@ -1,0 +1,43 @@
+.container {
+    border: 3px solid black;
+}
+
+.sidebar {
+    border: 3px solid green;
+}
+
+.header {
+    border: 3px solid blue;
+}
+
+.content {
+    border: 3px solid red;
+}
+
+ul {
+    border: 3px solid purple;
+}
+
+.card {
+    border: 3px solid yellow;
+}
+
+.searchBar {
+    border: 3px solid orange;
+}
+
+.profile {
+    border: 3px solid lightpink;
+}
+
+.bottomHeader {
+    border: 3px solid brown;
+}
+
+.announcements {
+    border: 3px solid crimson;
+}
+
+.trending {
+    border: 3px solid slategray;
+}
