@@ -7,7 +7,9 @@
 }
 
 body {
-  line-height: 1.5;
+    line-height: 1.5;
+    background-color: rgb(211, 211, 211, 50%);
+
 }
 
 img, picture, video, canvas, svg {
@@ -32,7 +34,6 @@ ul {
     padding: 0px;
 }
 .container {
-    border: 3px solid black;
     display: grid;
     grid-template-columns: 20% 80%;
     min-height: 100vh;
@@ -84,7 +85,9 @@ ul {
     display: grid;
     grid-template-rows: 1fr 1fr;
     padding: 15px 40px;
-    box-shadow: 0px 5px 5px purple;
+    box-shadow: 0px 5px 5px grey;
+    margin-bottom: 1rem;
+    background-color: white;
 }
 
 .topHeader {
@@ -164,13 +167,15 @@ img {
 }
 
 .content {
-    border: 3px solid red;
     grid-column: 2/3;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    background-color: rgb(211, 211, 211, 50%);
     padding: 15px;
     gap: 15px;
+    margin-bottom: 80px;
+}
+.content h3 {
+    margin-bottom: 1rem;
 }
 
 .cardStack {
@@ -180,7 +185,6 @@ img {
 }
 
 .card {
-    border: 3px solid yellow;
     border-left: 8px solid burlywood;
     border-radius: 5px;
     background-color: white;
@@ -198,7 +202,7 @@ img {
 }
 
 .cardText > p {
-    color: lightgray;
+    color: rgb(136, 136, 136);
     max-width: 75%;
 }
 
@@ -206,11 +210,37 @@ img {
     width: 1.25rem;
 }
 
-.announcements {
-    border: 3px solid crimson;
+.announcementStack {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.announcementStack .miniAnnouncement:nth-child(-n+2) {
+    border-bottom: 2px solid lightgray;
+}
+
+.miniAnnouncement {
+    width: 100%;
+    padding: 15px;
+}
+
+.trends {
+    display: flex;
+    gap: 1rem;
+    margin: .5rem 0rem;
 }
 
 .trending {
-    border: 3px solid slategray;
-    grid-column: 2;
+    padding: 1rem;
+}
+
+.trends p:first-child {
+    font-weight: bold;
+}
+
+.trends p:last-child {
+    color: rgb(136, 136, 136);
 }
