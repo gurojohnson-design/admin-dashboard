@@ -6,15 +6,8 @@
   margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
-}
-
 body {
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
 }
 
 img, picture, video, canvas, svg {
@@ -26,19 +19,12 @@ input, button, textarea, select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
 p {
   text-wrap: pretty;
 }
+
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
-}
-
-#root, #__next {
-  isolation: isolate;
 }
 
 ul {
@@ -49,7 +35,7 @@ ul {
     border: 3px solid black;
     display: grid;
     grid-template-columns: 20% 80%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .sidebar {
@@ -98,7 +84,7 @@ ul {
     display: grid;
     grid-template-rows: 1fr 1fr;
     padding: 15px 40px;
-    box-shadow: 0px 5px 5px gray;
+    box-shadow: 0px 5px 5px purple;
 }
 
 .topHeader {
@@ -177,17 +163,48 @@ img {
     font-weight: bold;
 }
 
-
-
 .content {
     border: 3px solid red;
     grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: rgb(211, 211, 211, 50%);
+    padding: 15px;
+    gap: 15px;
+}
+
+.cardStack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .card {
     border: 3px solid yellow;
+    border-left: 8px solid burlywood;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+    min-height: fit-content;
 }
 
+.cardBtns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.cardText > p {
+    color: lightgray;
+    max-width: 75%;
+}
+
+.card svg {
+    width: 1.25rem;
+}
 
 .announcements {
     border: 3px solid crimson;
@@ -195,4 +212,5 @@ img {
 
 .trending {
     border: 3px solid slategray;
+    grid-column: 2;
 }
